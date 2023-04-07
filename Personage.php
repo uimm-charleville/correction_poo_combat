@@ -22,6 +22,11 @@ class Personage
         echo "<center>-------------------- Attaque de $this->nom sur $personage->nom --------------------</center>";
     }
 
+     /**
+     * La fonction vérifie si le personage est vivant et retourne vrai 
+     * si il l'est et faux si il l'est pas
+     * @return bool si il est vivant ou non 
+     */
     public function estVivant(){
         if($this->pointDeVie>=0){
             return true;
@@ -30,6 +35,9 @@ class Personage
         }
     }
 
+    /**
+     * La fonction affiche les données de la classe 
+     */
     public function afficher()
     {
             echo "<br><br>";
