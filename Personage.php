@@ -22,6 +22,14 @@ class Personage
         echo "<center>-------------------- Attaque de $this->nom sur $personage->nom --------------------</center>";
     }
 
+    public function estVivant(){
+        if($this->pointDeVie>=0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public function afficher()
     {
             echo "<br><br>";
