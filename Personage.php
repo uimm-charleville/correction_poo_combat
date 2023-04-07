@@ -1,24 +1,29 @@
 <?php
-class Personage{
+class Personage
+{
     public $nom ; 
     public $pointDeVie; 
     public $degat;
 
-    public function __construct($nom,$pointDeVie,$degat){
+    public function __construct($nom,$pointDeVie,$degat)
+    {
         $this->nom = $nom;
         $this->pointDeVie = $pointDeVie;
         $this->degat = $degat;
-
     }
 
-    public function attaque($personage){
+    /**
+     * La function attaque prend en parametre une classe personnage qui va recevoir les degats
+     * @param Personage $personage Le personage qui encaisse les degats
+     */
+    public function attaque($personage)
+    {
         $personage->pointDeVie -= $this->degat;
         echo "<center>-------------------- Attaque de $this->nom sur $personage->nom --------------------</center>";
-
     }
 
-    public function afficher(){
-        {
+    public function afficher()
+    {
             echo "<br><br>";
             echo "<center>---------------------------------------------------</center>";
             echo "<center>--------------------$this->nom--------------------</center>";
@@ -28,7 +33,6 @@ class Personage{
             echo "<center>---------------------------------------------------</center>";
             echo "<center>---------------------------------------------------</center>";
             echo "<br><br>";
-        }
     }
 }
 
